@@ -8,10 +8,7 @@
             <cpp-extensions>cpp</cpp-extensions>
             <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
-            <make-dep-projects>
-                <make-dep-project>../Mixtures</make-dep-project>
-                <make-dep-project>../Error</make-dep-project>
-            </make-dep-projects>
+            <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>Headers</sourceRootElem>
                 <sourceRootElem>Sources</sourceRootElem>

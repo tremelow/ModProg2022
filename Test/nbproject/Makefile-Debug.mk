@@ -52,7 +52,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L../Error/build/Debug/GNU-Linux-x86 -L../Mixtures/build/Debug/GNU-Linux-x86 -Wl,-rpath,'../Mixtures/dist/Debug/GNU-Linux' -L../Mixtures/dist/Debug/GNU-Linux -lMixtures -Wl,-rpath,'../Error/dist/Debug/GNU-Linux' -L../Error/dist/Debug/GNU-Linux -lError -lgsl -lgslcblas -lpython2.7
+LDLIBSOPTIONS=-L../Error/build/Debug/GNU-Linux-x86 -L../Mixtures/build/Debug/GNU-Linux-x86 -Wl,-rpath,'../Mixtures/dist/Debug/GNU-Linux' -L../Mixtures/dist/Debug/GNU-Linux -lMixtures -Wl,-rpath,'../Error/dist/Debug/GNU-Linux' -L../Error/dist/Debug/GNU-Linux -lError -lgsl -lgslcblas -lpython3.8
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -69,7 +69,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test: ${OBJECTFILES}
 ${OBJECTDIR}/Sources/TestCPlusPlus.o: Sources/TestCPlusPlus.cpp
 	${MKDIR} -p ${OBJECTDIR}/Sources
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/python2.7 -I../Error/Headers -I../VectorAndMatrix/Headers -I../Mixtures/Headers -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/TestCPlusPlus.o Sources/TestCPlusPlus.cpp
+	$(COMPILE.cc) -g -I/usr/include/python3.8 -I../Error/Headers -I../VectorAndMatrix/Headers -I../Mixtures/Headers -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/TestCPlusPlus.o Sources/TestCPlusPlus.cpp
 
 # Subprojects
 .build-subprojects:

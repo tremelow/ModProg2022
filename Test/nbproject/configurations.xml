@@ -46,7 +46,7 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/usr/include/python2.7</pElem>
+            <pElem>/usr/include/python3.8</pElem>
             <pElem>../Error/Headers</pElem>
             <pElem>../VectorAndMatrix/Headers</pElem>
             <pElem>../Mixtures/Headers</pElem>
@@ -86,7 +86,7 @@
             </linkerLibProjectItem>
             <linkerLibLibItem>gsl</linkerLibLibItem>
             <linkerLibLibItem>gslcblas</linkerLibLibItem>
-            <linkerLibLibItem>python2.7</linkerLibLibItem>
+            <linkerLibLibItem>python3.8</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

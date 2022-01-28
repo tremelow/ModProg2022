@@ -47,46 +47,13 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/usr/include/python2.7</pElem>
-            <pElem>../Error/Headers</pElem>
-            <pElem>../Mixtures/Headers</pElem>
+            <pElem>/usr/include/python3.8</pElem>
             <pElem>Headers</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
-          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test</output>
-          <linkerAddLib>
-            <pElem>../Error/build/Debug/GNU-Linux-x86</pElem>
-            <pElem>../Mixtures/build/Debug/GNU-Linux-x86</pElem>
-          </linkerAddLib>
           <linkerLibItems>
-            <linkerLibProjectItem>
-              <makeArtifact PL="../Mixtures"
-                            CT="2"
-                            CN="Debug"
-                            AC="true"
-                            BL="true"
-                            WD="../Mixtures"
-                            BC="${MAKE}  -f Makefile CONF=Debug"
-                            CC="${MAKE}  -f Makefile CONF=Debug clean"
-                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.${CND_DLIB_EXT}">
-              </makeArtifact>
-            </linkerLibProjectItem>
-            <linkerLibProjectItem>
-              <makeArtifact PL="../Error"
-                            CT="2"
-                            CN="Debug"
-                            AC="true"
-                            BL="true"
-                            WD="../Error"
-                            BC="${MAKE}  -f Makefile CONF=Debug"
-                            CC="${MAKE}  -f Makefile CONF=Debug clean"
-                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libError.so">
-              </makeArtifact>
-            </linkerLibProjectItem>
-            <linkerLibLibItem>gsl</linkerLibLibItem>
-            <linkerLibLibItem>gslcblas</linkerLibLibItem>
-            <linkerLibLibItem>python2.7</linkerLibLibItem>
+            <linkerLibLibItem>python3.8</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

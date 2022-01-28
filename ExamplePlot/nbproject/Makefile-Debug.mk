@@ -52,40 +52,30 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L../Error/build/Debug/GNU-Linux-x86 -L../Mixtures/build/Debug/GNU-Linux-x86 -Wl,-rpath,'../Mixtures/dist/Debug/GNU-Linux' -L../Mixtures/dist/Debug/GNU-Linux -lMixtures -Wl,-rpath,'../Error/dist/Debug/GNU-Linux' -L../Error/dist/Debug/GNU-Linux -lError -lgsl -lgslcblas -lpython2.7
+LDLIBSOPTIONS=-lpython3.8
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampleplot
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test: ../Mixtures/dist/Debug/GNU-Linux/libMixtures.so
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test: ../Error/dist/Debug/GNU-Linux/libError.so
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampleplot: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampleplot ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Sources/ExamplePlot.o: Sources/ExamplePlot.cpp
 	${MKDIR} -p ${OBJECTDIR}/Sources
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/python2.7 -I../Error/Headers -I../Mixtures/Headers -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/ExamplePlot.o Sources/ExamplePlot.cpp
+	$(COMPILE.cc) -g -I/usr/include/python3.8 -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/ExamplePlot.o Sources/ExamplePlot.cpp
 
 # Subprojects
 .build-subprojects:
-	cd ../Mixtures && ${MAKE}  -f Makefile CONF=Debug
-	cd ../Error && ${MAKE}  -f Makefile CONF=Debug
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} -r ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.so ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libError.so
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test
 
 # Subprojects
 .clean-subprojects:
-	cd ../Mixtures && ${MAKE}  -f Makefile CONF=Debug clean
-	cd ../Error && ${MAKE}  -f Makefile CONF=Debug clean
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl
