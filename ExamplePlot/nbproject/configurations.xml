@@ -6,6 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="Headers" displayName="Headers" projectFiles="true">
         <itemPath>Headers/StdAfxExamplePlot.h</itemPath>
+        <itemPath>Headers/matplotlibcpp.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -91,6 +92,8 @@
       </compileType>
       <item path="Headers/StdAfxExamplePlot.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Headers/matplotlibcpp.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Sources/ExamplePlot.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -115,6 +118,8 @@
         </asmTool>
       </compileType>
       <item path="Headers/StdAfxExamplePlot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers/matplotlibcpp.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Sources/ExamplePlot.cpp" ex="false" tool="1" flavor2="0">
       </item>
