@@ -49,7 +49,7 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/usr/include/python3.8</pElem>
+            <pElem>/usr/include/python2.7</pElem>
             <pElem>../Error/Headers</pElem>
             <pElem>Headers</pElem>
           </incDir>

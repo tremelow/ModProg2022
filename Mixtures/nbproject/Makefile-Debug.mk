@@ -65,7 +65,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.${CND_DLIB_EXT}: ${OBJECT
 ${OBJECTDIR}/Sources/cGaussian.o: Sources/cGaussian.cpp
 	${MKDIR} -p ${OBJECTDIR}/Sources
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/python3.8 -I../Error/Headers -IHeaders -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/cGaussian.o Sources/cGaussian.cpp
+	$(COMPILE.cc) -g -I/usr/include/python2.7 -I../Error/Headers -IHeaders -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/cGaussian.o Sources/cGaussian.cpp
 
 # Subprojects
 .build-subprojects:
