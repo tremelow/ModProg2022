@@ -52,7 +52,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lpython2.7
+LDLIBSOPTIONS=-lpython3.8
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -65,7 +65,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampleplot: ${OBJECTFILES}
 ${OBJECTDIR}/Sources/ExamplePlot.o: Sources/ExamplePlot.cpp
 	${MKDIR} -p ${OBJECTDIR}/Sources
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/python2.7 -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/ExamplePlot.o Sources/ExamplePlot.cpp
+	$(COMPILE.cc) -g -I/usr/include/python3.8 -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/ExamplePlot.o Sources/ExamplePlot.cpp
 
 # Subprojects
 .build-subprojects:
