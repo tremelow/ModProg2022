@@ -47,13 +47,13 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/usr/include/python3.8</pElem>
+            <pElem>/usr/include/python2.7</pElem>
             <pElem>Headers</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibLibItem>python3.8</linkerLibLibItem>
+            <linkerLibLibItem>python2.7</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
