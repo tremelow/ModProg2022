@@ -60,6 +60,7 @@
             <pElem>../Error/build/Debug/GNU-Linux-x86</pElem>
             <pElem>../Mixtures/build/Debug/GNU-Linux-x86</pElem>
           </linkerAddLib>
+          <commandlineTool>g++</commandlineTool>
           <linkerLibItems>
             <linkerLibProjectItem>
               <makeArtifact PL="../Mixtures"

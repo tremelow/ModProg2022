@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <math.h>  
 #include <gsl/gsl_cdf.h>
 #include <iostream>
@@ -184,6 +185,5 @@ namespace Mixtures {
                 matplotlibcpp::show();
 
 	}
-
 
 }//namespace
