@@ -29,7 +29,7 @@ namespace Mixtures {
 	{
             uint myNbParameters = theDistrParameter.size();
             
-            parameter = theDistrParameter;
+            // parameter = theDistrParameter;
             
             if (myNbParameters != 2) 
             {
