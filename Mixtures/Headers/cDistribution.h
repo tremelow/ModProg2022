@@ -39,6 +39,7 @@ namespace Mixtures {
                 cDistribution() ; 
                 cDistribution(const vector<double>& theDistrParameter, 
                               bool theSimulFlag=true) ; ///< a simple constructor
+                cDistribution(const cDistribution& theDistrib) ; ///< a copy constructor
                 virtual ~cDistribution() ; ///< a simple destructor
                 // A completer
                 /** Compute pdf */

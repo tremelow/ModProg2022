@@ -47,12 +47,10 @@ namespace Mixtures {
             MESS_CREAT("cDistribution")
 	}
 	/*!
-	 * \fn cGaussian(float theMean, float theVariance, 
-                         bool theSimulFlag) ; 
+	 * \fn cDistribution::cDistribution(const cDistribution& theDistrib) ; 
 
-	 * \param float theMean: Mean
-	 * \param float theVariance: Variance
-	 * \param bool theSimulFlag: true if created for simulation
+	 * \param const cDistribution& theDistrib: source
+	 * \brief Copy theDistrib into *this
 	 */
 	cDistribution::cDistribution(const cDistribution& theDistrib)
 	{

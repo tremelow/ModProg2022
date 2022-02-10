@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <math.h>  
 #include <gsl/gsl_cdf.h>
 #include <iostream>
