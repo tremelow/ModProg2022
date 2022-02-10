@@ -45,6 +45,7 @@
       </toolsSet>
       <compileType>
         <ccTool>
+          <commandlineTool>g++</commandlineTool>
           <incDir>
             <pElem>/usr/include/python3.8</pElem>
             <pElem>../Error/Headers</pElem>

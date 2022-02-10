@@ -8,19 +8,28 @@ using namespace ErrorNameSpace;
 using namespace Mixtures ;
 using namespace std;
 
+enum Plot_Types {
+    pdf,
+    hist
+};
+
 int main(int argc, char* argv[])
 {
     cout.precision(12) ; 
+    const Plot_Types plot_type = hist; // type of plot
 
-    cGaussian myGaussian(4, 4);
+    cExponential myExponential(4);
     uint mySampleSize = 10, t;
     vector<double> mySample, abs, ord;
     // Simulate
     
     cout << "Created model " ;
-    myGaussian.Print(cout);
+    myExponential.Print(cout);
+
+    cout << "Created model (Distribution::Print)" ;
+    myExponential.cDistribution::Print(cout);
     
-    myGaussian.Generate(mySampleSize, mySample);    
+    myExponential.Generate(mySampleSize, mySample);    
     
     cout << "Simulated variables: " << endl;
     for (t=0; t < mySampleSize-1; t++)
@@ -28,21 +37,29 @@ int main(int argc, char* argv[])
     cout << mySample[mySampleSize-1] << endl;   
 
     // Plot pdf
-    matplotlibcpp::subplot(1, 2, 1);
     abs.resize(1000);
     ord.resize(1000);
     for (t=0; t < 1000; t++)
     {
-        abs[t] = -2 + t * 12. / 1000;
-        ord[t] = myGaussian.Density(abs[t]);
-        cout << "(" << abs[t] << "; " << ord[t] << ")" << endl;
+        abs[t] = -0.2 + t * 3. / 1000;
+        ord[t] = myExponential.Density(abs[t]);
     }
-    matplotlibcpp::plot(abs, ord);
+    
     
     // Simulate larger sample and plot histogram
-    myGaussian.Generate(1000, mySample);
-    matplotlibcpp::subplot(1, 2, 2);    
-    matplotlibcpp::hist(mySample);
+    myExponential.Generate(1000, mySample);
+    
+    
+    switch (plot_type)
+    {
+      case pdf :
+         matplotlibcpp::plot(abs, ord);
+         break;
+      case hist :
+         matplotlibcpp::hist(mySample);
+         break;
+    }
+    
     matplotlibcpp::show();
     
     return 0 ;

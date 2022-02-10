@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _CGAUSSIAN_H_
-#define _CGAUSSIAN_H_
+#ifndef _CEXPONENTIAL_H_
+#define _CEXPONENTIAL_H_
 
 #include <gsl/gsl_randist.h>
 #include <vector>
@@ -8,8 +8,8 @@
 #include "cDistribution.h"
 
 /*!
- \file cGaussian.h
- \brief Definition of the class for N(m, s2) distributions.
+ \file cExponential.h
+ \brief Definition of the class for exponential distributions.
 
  \author Jean-Baptiste DURAND
  \date jan-28-2022
@@ -18,22 +18,21 @@
 namespace Mixtures {
 
 	/*! 
-	 * \class cGaussian
+	 * \class cExponential
 	 * \brief Class to implement N(m, s2) distributions.
 	 */
         using namespace std;
 
     
-	class cGaussian : public cDistribution
+	class cExponential : public cDistribution
 	{
-            friend std::ostream& operator<<(std::ostream &os, const cGaussian& distrib);
+            friend std::ostream& operator<<(std::ostream &os, const cExponential& distrib);
         
             public :
-                cGaussian(const vector<double>& theDistrParameter, 
+                cExponential(const vector<double>& theDistrParameter, 
                           bool theSimulFlag=true) ; ///< a simple constructor
-                cGaussian(float theMean, float theVariance, 
-                          bool theSimulFlag=true) ; ///< a simple constructor
-                virtual ~cGaussian() ; ///< a simple destructor
+                cExponential(float theParam, bool theSimulFlag=true) ; ///< a simple constructor
+                virtual ~cExponential() ; ///< a simple destructor
                 /** Compute pdf */
                 double Density(double theY, bool theLog=false) const ;
                 /** Draw a sample from distribution */
@@ -49,5 +48,5 @@ namespace Mixtures {
 
 }
 
-#endif //_CGAUSSIAN_H_
+#endif //_CEXPONENTIAL_H_
 

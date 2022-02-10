@@ -7,6 +7,8 @@
       <logicalFolder name="Headers" displayName="Headers" projectFiles="true">
         <itemPath>Headers/MixturesDef.h</itemPath>
         <itemPath>Headers/StdAfxMixtures.h</itemPath>
+        <itemPath>Headers/cDistribution.h</itemPath>
+        <itemPath>Headers/cExponential.h</itemPath>
         <itemPath>Headers/cGaussian.h</itemPath>
         <itemPath>Headers/matplotlibcpp.h</itemPath>
       </logicalFolder>
@@ -19,6 +21,8 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="Sources" displayName="Sources" projectFiles="true">
+        <itemPath>Sources/cDistribution.cpp</itemPath>
+        <itemPath>Sources/cExponential.cpp</itemPath>
         <itemPath>Sources/cGaussian.cpp</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -49,7 +53,7 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/usr/include/python2.7</pElem>
+            <pElem>/usr/include/python3.8</pElem>
             <pElem>../Error/Headers</pElem>
             <pElem>Headers</pElem>
           </incDir>
@@ -71,9 +75,17 @@
       </item>
       <item path="Headers/StdAfxMixtures.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Headers/cDistribution.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers/cExponential.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Headers/cGaussian.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Headers/matplotlibcpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sources/cDistribution.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sources/cExponential.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sources/cGaussian.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -102,9 +114,17 @@
       </item>
       <item path="Headers/StdAfxMixtures.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Headers/cDistribution.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers/cExponential.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Headers/cGaussian.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Headers/matplotlibcpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sources/cDistribution.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sources/cExponential.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sources/cGaussian.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Sources/cDistribution.o \
+	${OBJECTDIR}/Sources/cExponential.o \
 	${OBJECTDIR}/Sources/cGaussian.o
 
 
@@ -61,6 +63,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.${CND_DLIB_EXT}: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.${CND_DLIB_EXT} ${OBJECTFILES} ${LDLIBSOPTIONS} -shared -fPIC
+
+${OBJECTDIR}/Sources/cDistribution.o: Sources/cDistribution.cpp
+	${MKDIR} -p ${OBJECTDIR}/Sources
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/cDistribution.o Sources/cDistribution.cpp
+
+${OBJECTDIR}/Sources/cExponential.o: Sources/cExponential.cpp
+	${MKDIR} -p ${OBJECTDIR}/Sources
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/cExponential.o Sources/cExponential.cpp
 
 ${OBJECTDIR}/Sources/cGaussian.o: Sources/cGaussian.cpp
 	${MKDIR} -p ${OBJECTDIR}/Sources

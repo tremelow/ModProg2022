@@ -9,3 +9,4 @@
 #include "StdAfxError.h"
 
 #include "cGaussian.h"
+#include "cExponential.h"
