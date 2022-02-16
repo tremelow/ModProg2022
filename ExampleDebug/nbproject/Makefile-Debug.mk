@@ -35,7 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Sources/TestCPlusPlus.o
+	${OBJECTDIR}/Source/Tests.o
 
 
 # C Compiler Flags
@@ -52,24 +52,24 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L../Error/build/Debug/GNU-Linux-x86 -L../Mixtures/build/Debug/GNU-Linux-x86 -Wl,-rpath,'../Mixtures/dist/Debug/GNU-Linux' -L../Mixtures/dist/Debug/GNU-Linux -lMixtures -Wl,-rpath,'../Error/dist/Debug/GNU-Linux' -L../Error/dist/Debug/GNU-Linux -lError -lgsl -lgslcblas -lpython3.8
+LDLIBSOPTIONS=-L../Error/build/Debug/GNU-Linux -L../Mixtures/build/Debug/GNU-Linux -Wl,-rpath,'../Mixtures/dist/Debug/GNU-Linux' -L../Mixtures/dist/Debug/GNU-Linux -lMixtures -Wl,-rpath,'../Error/dist/Debug/GNU-Linux' -L../Error/dist/Debug/GNU-Linux -lError -lgsl -lgslcblas -lpython3.8
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampledebug
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test: ../Mixtures/dist/Debug/GNU-Linux/libMixtures.so
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampledebug: ../Mixtures/dist/Debug/GNU-Linux/libMixtures.so
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test: ../Error/dist/Debug/GNU-Linux/libError.so
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampledebug: ../Error/dist/Debug/GNU-Linux/libError.so
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampledebug: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampledebug ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Sources/TestCPlusPlus.o: Sources/TestCPlusPlus.cpp
-	${MKDIR} -p ${OBJECTDIR}/Sources
+${OBJECTDIR}/Source/Tests.o: Source/Tests.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/python3.8 -I../Error/Headers -I../VectorAndMatrix/Headers -I../Mixtures/Headers -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/TestCPlusPlus.o Sources/TestCPlusPlus.cpp
+	$(COMPILE.cc) -g -I../Error/Headers -I../Mixtures/Headers -IHeaders -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/Tests.o Source/Tests.cpp
 
 # Subprojects
 .build-subprojects:
@@ -80,7 +80,7 @@ ${OBJECTDIR}/Sources/TestCPlusPlus.o: Sources/TestCPlusPlus.cpp
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
 	${RM} -r ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.so ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libError.so
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/test
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exampledebug
 
 # Subprojects
 .clean-subprojects:

@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Sources/cCorruptedGaussian.o \
 	${OBJECTDIR}/Sources/cDistribution.o \
 	${OBJECTDIR}/Sources/cExponential.o \
 	${OBJECTDIR}/Sources/cGaussian.o
@@ -63,6 +64,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.${CND_DLIB_EXT}: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libMixtures.${CND_DLIB_EXT} ${OBJECTFILES} ${LDLIBSOPTIONS} -shared -fPIC
+
+${OBJECTDIR}/Sources/cCorruptedGaussian.o: Sources/cCorruptedGaussian.cpp
+	${MKDIR} -p ${OBJECTDIR}/Sources
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr/include/python3.8 -I../Error/Headers -IHeaders -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sources/cCorruptedGaussian.o Sources/cCorruptedGaussian.cpp
 
 ${OBJECTDIR}/Sources/cDistribution.o: Sources/cDistribution.cpp
 	${MKDIR} -p ${OBJECTDIR}/Sources

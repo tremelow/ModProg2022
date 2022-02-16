@@ -51,6 +51,7 @@ namespace Mixtures {
                 /** Return the number of parameters in distribution */
                 uint GetNParam(void) const ;
                 /** Return distribution name */
+                /** Please update the declaration */
                 ostringstream Name() const ; 
                 /** Return the number of parameters in distribution */
                 void Plot(bool show=true) const; ///< plot pdf with python
