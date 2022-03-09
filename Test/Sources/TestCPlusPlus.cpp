@@ -10,7 +10,8 @@ using namespace std;
 
 enum Plot_Types {
     pdf,
-    hist
+    hist,
+    none
 };
 
 int main(int argc, char* argv[])
@@ -18,7 +19,8 @@ int main(int argc, char* argv[])
     cout.precision(12) ; 
     const Plot_Types plot_type = hist; // type of plot
 
-    cExponential myExponential(4);
+    cExponential myExponential(1.5);
+    cExponential myExponentialCp = myExponential;
     uint mySampleSize = 10, t;
     vector<double> mySample, abs, ord;
     // Simulate
@@ -28,6 +30,8 @@ int main(int argc, char* argv[])
 
     cout << "Created model (Distribution::Print)" ;
     myExponential.cDistribution::Print(cout);
+
+    cout << "Copy: " << myExponentialCp << endl;
     
     myExponential.Generate(mySampleSize, mySample);    
     
@@ -48,19 +52,19 @@ int main(int argc, char* argv[])
     
     // Simulate larger sample and plot histogram
     myExponential.Generate(1000, mySample);
-    
-    
+        
     switch (plot_type)
     {
       case pdf :
-         matplotlibcpp::plot(abs, ord);
+         myExponential.Plot();
          break;
       case hist :
          matplotlibcpp::hist(mySample);
+         matplotlibcpp::show();
          break;
     }
     
-    matplotlibcpp::show();
+    
     
     return 0 ;
 

@@ -59,7 +59,7 @@ namespace Mixtures {
             if (theDistrib.mtR)
             {	// random generator simulation
                 gsl_rng_env_setup() ;
-                mtR = new gsl_rng(*theDistrib.mtR) ;
+                mtR = gsl_rng_alloc(gsl_rng_default) ;
             }
             else
                 mtR = NULL ;
@@ -108,7 +108,13 @@ namespace Mixtures {
 	 */
 	void cDistribution::ParameterPrint(ostream& theOut) const
 	{
-            // A completer
+            uint i, myNParams = parameter.size();
+            theOut << "parameters: ";
+            
+            for (i=0; i < myNParams-1; i++)
+                theOut << parameter[i] << "; ";
+
+            theOut << parameter[myNParams-1] << endl;
 	}
         
 	/*!
